@@ -89,6 +89,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  transition: 150ms ease-in-out;
 }
 
 .bottomNavButton img {
@@ -106,4 +107,9 @@ body {
 
 .bottomNavButton img:hover {
   scale: 1.02;
+}
+
+.bottomNavButton:hover {
+  transform: translateY(-2px);
+  scale: 1.01;
 }

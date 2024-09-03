@@ -71,5 +71,5 @@
 
 .itineraryDetail:hover {
   text-decoration: underline;
-  text-underline-offset: 0.5rem;
+  text-underline-offset: 0.1rem;
 }

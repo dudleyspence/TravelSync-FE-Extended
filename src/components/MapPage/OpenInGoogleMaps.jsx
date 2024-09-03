@@ -1,5 +1,5 @@
 import React from "react";
-import googleMaps from "../../assets/google-maps-icon.png";
+import googleMaps from "../../assets/Google-maps-icon.png";
 
 function OpenInGoogleMapsButton({ placeName, lat, lng }) {
   const handleOpenInGoogleMaps = () => {

@@ -66,6 +66,16 @@ function App() {
                 userLoggedIn ? <FilesPage /> : <Navigate to="/login" replace />
               }
             />
+            {/* <Route
+              path="/expenses"
+              element={
+                userLoggedIn ? (
+                  <ExpensesPage />
+                ) : (
+                  <Navigate to="/login" replace />
+                )
+              }
+            /> */}
           </Routes>
         </div>
       </ItineraryContextProvider>

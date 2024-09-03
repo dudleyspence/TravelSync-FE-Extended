@@ -13,3 +13,9 @@ export const getFiles = (itinerary_id) => {
     return data;
   });
 };
+
+export const deleteSingleFile = (file_id) => {
+  return travelSyncAPI.delete(`/files/${file_id}`).then(({ data }) => {
+    return data;
+  });
+};

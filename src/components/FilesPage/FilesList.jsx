@@ -18,6 +18,8 @@ export default function FilesList({ updateFiles, setUpdateFiles }) {
     });
   }, [updateFiles]);
 
+  function handleDeleteFile(file_id) {}
+
   return (
     <div className="filesListContainer">
       <ul>
@@ -33,7 +35,14 @@ export default function FilesList({ updateFiles, setUpdateFiles }) {
                 <img src={documentIcon} alt="pdf" className="documentIcon" />
               </a>
               <p>{file.file_name}</p>
-              <img src={deleteBin} className="binImg" alt="delete button" />
+
+              <button
+                onClick={() => {
+                  handleDeleteFile(file.id);
+                }}
+              >
+                <img src={deleteBin} className="binImg" alt="delete button" />
+              </button>
             </li>
           ))
         )}

@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import HomeHeader from "../General/Header";
 import BottomNav from "../NavBar/BottomNav";
 import TopNav from "../NavBar/TopNav";
+import RotatePhone from "../General/RotatePhone";
 
 export default function MapPage() {
   const [search, setSearch] = useState("");
@@ -71,40 +72,44 @@ export default function MapPage() {
   }
 
   return (
-    <div className="mapPage">
-      <TopNav />
-      <HomeHeader />
-      <SearchBar setSearch={setSearch} />
-      <div className="nearbyAndType">
-        <button
-          className={showNearby ? "styled-button hide" : "styled-button"}
-          onClick={handleChangeSearchModeOnClick}
-          disabled={!mainLocation && locationsList.length < 1}
-        >
-          {showNearby ? "Hide Nearby Locations" : "Nearby Locations"}
-        </button>
-        {showNearby && <TypeMenu type={type} setType={setType} />}
-      </div>
-      {showNearby && (
-        <Slider
-          onChange={handleSliderChange}
-          aria-label="Radius"
-          value={radius}
-          valueLabelDisplay="auto"
-          step={100}
-          marks
-          min={100}
-          max={3000}
-        />
-      )}
+    <div className="mapPageContainer">
+      <RotatePhone />
+      <div className="mapPage">
+        <TopNav />
+        <HomeHeader />
 
-      <LargeMap
-        className="largeMap"
-        locationsList={locationsList}
-        lat={lat}
-        lng={lng}
-      />
-      <BottomNav />
+        <SearchBar setSearch={setSearch} />
+        <div className="nearbyAndType">
+          <button
+            className={showNearby ? "styled-button hide" : "styled-button"}
+            onClick={handleChangeSearchModeOnClick}
+            disabled={!mainLocation && locationsList.length < 1}
+          >
+            {showNearby ? "Hide Nearby Locations" : "Nearby Locations"}
+          </button>
+          {showNearby && <TypeMenu type={type} setType={setType} />}
+        </div>
+        {showNearby && (
+          <Slider
+            onChange={handleSliderChange}
+            aria-label="Radius"
+            value={radius}
+            valueLabelDisplay="auto"
+            step={100}
+            marks
+            min={100}
+            max={3000}
+          />
+        )}
+
+        <LargeMap
+          className="largeMap"
+          locationsList={locationsList}
+          lat={lat}
+          lng={lng}
+        />
+        <BottomNav />
+      </div>
     </div>
   );
 }

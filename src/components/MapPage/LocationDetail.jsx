@@ -8,6 +8,7 @@ import StarRating from "./StarRating";
 import websiteIcon from "../../assets/websiteIcon.png";
 import addressIcon from "../../assets/addressIcon.png";
 import phoneIcon from "../../assets/phoneIcon.png";
+import RotatePhone from "../General/RotatePhone";
 
 const LocationDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,6 +42,7 @@ const LocationDetail = () => {
     "page loading"
   ) : (
     <div className="location-detail-page">
+      <RotatePhone />
       <div className="location-detail-container">
         <h1>
           {console.log(placeDetail)}

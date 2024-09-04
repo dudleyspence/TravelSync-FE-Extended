@@ -62,3 +62,22 @@
     height: 80%;
   }
 }
+
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+  .rotatePhone {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .mapPage {
+    display: none;
+  }
+  .mapPageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .location-detail-container {
+    display: none;
+  }
+}

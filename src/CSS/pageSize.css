@@ -54,4 +54,11 @@
   .topNav button img {
     max-width: 20px;
   }
+  .location-detail-page {
+    height: calc(100vh - 80px);
+  }
+  .location-detail-container {
+    box-sizing: border-box;
+    height: 80%;
+  }
 }

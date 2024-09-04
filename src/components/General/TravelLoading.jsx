@@ -2,7 +2,7 @@ import React from "react";
 import Lottie from "lottie-react";
 import animationData from "../../assets/travelLoading.json";
 
-export default function LoadingHomepage() {
+export default function TravelLoading() {
   return (
     <div>
       <Lottie

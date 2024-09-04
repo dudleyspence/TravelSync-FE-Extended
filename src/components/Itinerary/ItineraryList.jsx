@@ -13,6 +13,7 @@ import {
 import globe from "../../assets/exploreGlobe.png";
 import deleteBin from "../../assets/deleteBin.png";
 import reshuffle from "../../assets/reshuffle.png";
+import TravelLoading from "../General/TravelLoading";
 
 const ItineraryList = () => {
   const [events, setEvents] = useState([]);
@@ -80,7 +81,7 @@ const ItineraryList = () => {
   }
 
   return isLoading ? (
-    "loading"
+    <TravelLoading />
   ) : eventOrder.length === 0 ? (
     <div className="noLocations">
       <button onClick={handleGoToMap}>

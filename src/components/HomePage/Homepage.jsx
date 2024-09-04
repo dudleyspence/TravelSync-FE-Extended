@@ -9,7 +9,7 @@ import { doSignOut } from "../../firebase/auth";
 import { getUser } from "../../axios";
 import CreateAndJoin from "./CreateAndJoin";
 import { LocationContext } from "../Context/LocationsContextProvider";
-import LoadingHomepage from "./LoadingHomepage";
+import TravelLoading from "../General/TravelLoading";
 
 export default function Homepage() {
   const { currentUser } = useAuth();
@@ -49,7 +49,7 @@ export default function Homepage() {
   return (
     <div className="homepage-container">
       {isLoading ? (
-        <LoadingHomepage />
+        <TravelLoading />
       ) : (
         <div className="homepage">
           <button onClick={handleOnClick} className="styled-button sign-out">

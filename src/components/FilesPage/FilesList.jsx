@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { ItineraryContext } from "../Context/ItineraryContextProvider";
-import { getFiles } from "../../axios";
+import { deleteSingleFile, downloadFile, getFiles } from "../../axios";
 import deleteBin from "../../assets/deleteBin.png";
 import documentIcon from "../../assets/document.png";
 import emptyFile from "../../assets/emptyFile.png";
@@ -18,7 +18,22 @@ export default function FilesList({ updateFiles, setUpdateFiles }) {
     });
   }, [updateFiles]);
 
-  function handleDeleteFile(file_id) {}
+  function handleDeleteFile(file_id) {
+    deleteSingleFile(file_id).then((response) => {
+      setUpdateFiles(true);
+    });
+  }
+
+  function handleDownload(file_id) {
+    downloadFile(file_id)
+      .then((url) => {
+        console.log(url);
+        window.location.href = url;
+      })
+      .catch((error) => {
+        console.error("Error downloading file");
+      });
+  }
 
   return (
     <div className="filesListContainer">
@@ -31,9 +46,13 @@ export default function FilesList({ updateFiles, setUpdateFiles }) {
         ) : (
           currentFiles.map((file) => (
             <li key={file.id} className="savedFile">
-              <a href={file.file_path} download>
+              <button
+                onClick={() => {
+                  handleDownload(file.id);
+                }}
+              >
                 <img src={documentIcon} alt="pdf" className="documentIcon" />
-              </a>
+              </button>
               <p>{file.file_name}</p>
 
               <button

@@ -15,7 +15,18 @@ export const getFiles = (itinerary_id) => {
 };
 
 export const deleteSingleFile = (file_id) => {
-  return travelSyncAPI.delete(`/files/${file_id}`).then(({ data }) => {
-    return data;
+  return travelSyncAPI
+    .delete(`/files/${file_id}`)
+    .then(({ data }) => {
+      return data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+export const downloadFile = (file_id) => {
+  return travelSyncAPI.get(`files/download/${file_id}`).then(({ data }) => {
+    return data.url;
   });
 };

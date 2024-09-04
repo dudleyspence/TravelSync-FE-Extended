@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { Navigate, Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../Context/AuthContext";
-import { doCreateUserWithEmailAndPassword } from "../../firebase/auth"; // Import only the functions you need
+import { doCreateUserWithEmailAndPassword } from "../../firebase/auth";
 import logo from "../../assets/TravelSync.png";
-import { saveNewUser } from "../../axios"; // Assume this is the function to save user to your database
+import { saveNewUser } from "../../axios";
 
 export default function SignUp() {
   const navigate = useNavigate();
   const { userLoggedIn } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState(""); // This will be saved to your own database
+  const [name, setName] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isRegistering, setIsRegistering] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");

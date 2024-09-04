@@ -15,7 +15,6 @@
   width: 100%;
   height: calc(100vh - 20px);
   display: flex;
-  padding-bottom: 40px;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
@@ -141,12 +140,19 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  gap: 1rem;
+  margin-top: 10px;
+  gap: 0.5rem;
 }
 
 .homeSearchBar button {
   max-width: 100px;
+}
+
+.homeSearchBar label {
+  font-size: 12px;
+  text-align: left;
+  width: 60%;
+  display: grid;
 }
 
 .homeSearchBar input {
@@ -157,7 +163,7 @@ li {
   padding-left: 15px;
   background-color: #ffffffcd;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  font-size: small;
+  font-size: 8px;
   font-weight: bold;
   max-width: 200px;
   transition: 300ms ease-in-out;

@@ -58,18 +58,21 @@ export default function HomepageSearchBar({
         className="homeSearchBar"
       >
         <label htmlFor="CreateAndJoin">
-          {isJoin ? "Join Code" : "Itinerary Name"}
-        </label>{" "}
-        <input
-          placeholder={isJoin ? "Join Code" : "Itinerary Name"}
-          type="text"
-          name="CreateAndJoin"
-          id="CreateAndJoin"
-          value={input}
-          onChange={(e) => {
-            setInput(e.target.value);
-          }}
-        />
+          {isJoin ? "Join Code:" : "Itinerary Name:"}
+
+          <input
+            placeholder={
+              isJoin ? "Type join code here" : "Type itinerary name here"
+            }
+            type="text"
+            name="CreateAndJoin"
+            id="CreateAndJoin"
+            value={input}
+            onChange={(e) => {
+              setInput(e.target.value);
+            }}
+          />
+        </label>
         <button className="styled-button">{isJoin ? "Join" : "Create"}</button>
       </form>
     </div>

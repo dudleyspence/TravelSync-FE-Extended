@@ -69,8 +69,8 @@ function TypeMenu({ type, setType }) {
       <FormControl
         sx={{
           m: 1,
-          minWidth: 100, // Change width to match button's size
-          maxWidth: 150, // Adjust max-width if needed
+          minWidth: 100,
+          maxWidth: 150,
         }}
       >
         <Select

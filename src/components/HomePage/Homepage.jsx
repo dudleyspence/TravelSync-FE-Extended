@@ -26,15 +26,17 @@ export default function Homepage() {
 
   useEffect(() => {
     setCurrentItinerary(null);
-    getUser(currentUser.uid)
-      .then((user) => {
-        setName(user.name);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setIsLoading(false);
-      });
+    if (currentUser) {
+      getUser(currentUser.uid)
+        .then((user) => {
+          setName(user.name);
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+          setIsLoading(false);
+        });
+    }
   }, [currentUser]);
 
   const handleOnClick = () => {

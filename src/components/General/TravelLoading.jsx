@@ -8,7 +8,7 @@ export default function TravelLoading() {
       <Lottie
         animationData={animationData}
         loop={true}
-        className="uploadAnimation"
+        className="travelLoadingAnimation"
       />
     </div>
   );

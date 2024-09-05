@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { ItineraryContext } from "../Context/ItineraryContextProvider";
 
-export default function () {
+export default function HomeHeader() {
   const { currentItinerary } = useContext(ItineraryContext);
 
   return (

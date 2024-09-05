@@ -9,6 +9,8 @@ import websiteIcon from "../../assets/websiteIcon.png";
 import addressIcon from "../../assets/addressIcon.png";
 import phoneIcon from "../../assets/phoneIcon.png";
 import RotatePhone from "../General/RotatePhone";
+import NoPlaceDetails from "./NoPlaceDetails";
+import TravelLoading from "../General/TravelLoading";
 
 const LocationDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,9 +39,11 @@ const LocationDetail = () => {
   }, [place_id]);
 
   return isError ? (
-    "Error fetching place detail"
+    <NoPlaceDetails />
   ) : isLoading ? (
-    "page loading"
+    <div className="location-detail-page">
+      <TravelLoading />
+    </div>
   ) : (
     <div className="location-detail-page">
       <RotatePhone />

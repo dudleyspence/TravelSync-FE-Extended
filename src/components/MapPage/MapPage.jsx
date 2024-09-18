@@ -13,7 +13,7 @@ import TopNav from "../NavBar/TopNav";
 import RotatePhone from "../General/RotatePhone";
 
 export default function MapPage() {
-  const [search, setSearch] = useState({});
+  const [search, setSearch] = useState("");
   const navigate = useNavigate();
   const { locationsList, setLocationsList } = useContext(LocationContext);
   const [mainLocation, setMainLocation] = useState(
@@ -35,7 +35,7 @@ export default function MapPage() {
   }, []);
 
   useEffect(() => {
-    if (!search) {
+    if (search !== "") {
       setShowNearby(false);
       getSingleLocation(search).then((mainLocationData) => {
         setMainLocation(mainLocationData);

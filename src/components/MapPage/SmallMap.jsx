@@ -3,8 +3,8 @@ import mapboxgl from "mapbox-gl";
 
 import "../../CSS/map_box.css";
 
-const mapBoxAccessCode = process.env.MAPBOX;
-console.log(mapBoxAccessCode);
+const mapBoxAccessCode = import.meta.env.VITE_MAPBOX;
+console.log(mapBoxAccessCode, "<<< MAPBOX");
 mapboxgl.accessToken = mapBoxAccessCode;
 
 const SmallMap = ({ location }) => {

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { ItineraryContext } from "../Context/ItineraryContextProvider";
 import { addLocationToItinerary } from "../../axios/index";
 
-const mapBoxAccessCode = process.env.REACT_APP_MAPBOX;
+const mapBoxAccessCode = import.meta.env.VITE_MAPBOX;
 console.log(mapBoxAccessCode, "<<< MAPBOX");
 mapboxgl.accessToken = mapBoxAccessCode;
 

@@ -4,7 +4,7 @@ import mapboxgl from "mapbox-gl";
 import "../../CSS/map_box.css";
 
 const mapBoxAccessCode = process.env.MAPBOX;
-
+console.log(mapBoxAccessCode);
 mapboxgl.accessToken = mapBoxAccessCode;
 
 const SmallMap = ({ location }) => {

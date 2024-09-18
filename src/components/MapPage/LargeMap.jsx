@@ -7,7 +7,7 @@ import { ItineraryContext } from "../Context/ItineraryContextProvider";
 import { addLocationToItinerary } from "../../axios/index";
 
 const mapBoxAccessCode = process.env.REACT_APP_MAPBOX;
-
+console.log(mapBoxAccessCode, "<<< MAPBOX");
 mapboxgl.accessToken = mapBoxAccessCode;
 
 export default function LargeMap({ locationsList, lat, lng }) {

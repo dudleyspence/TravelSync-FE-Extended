@@ -1,93 +1,153 @@
-This project began as an Agile group for 4 taking part in a project phase. Once this phase ended I decided to independantly continue with the project.
 
-This original group repository can be found here [https://github.com/dudleyspence/TravelSync-FE-Group](https://github.com/dudleyspence/TravelSync-FE-Group.git)
+# **TravelSync Front-End**
 
+**Description**  
+TravelSync Front-End is the dynamic and interactive user interface for the TravelSync application, enabling users to create, manage, and collaborate on group itineraries seamlessly. Initially developed as part of an Agile group project, the front-end was extended and refined independently to enhance functionality and usability.
 
-# TravelSync Front-End
+The original group repository can be found here:  
+[TravelSync Front-End Group Repository](https://github.com/dudleyspence/TravelSync-FE-Group.git)
 
-Welcome to the TravelSync Front-End repository! This is the front-end component of the TravelSync application, designed to provide a dynamic and user-friendly 
-interface for managing group itineraries. 
+---
 
-## Table of Contents
+## **Features**
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Key Components](#key-components)
-- [API Integration](#api-integration)
+- **Interactive Map Integration**: Visualise and manage location-based data with Mapbox.
+- **Lottie Animations**: Animations for loading states enhance the user experience.
+- **Drag-and-Drop Itinerary Management**: Reorder, add, or remove itinerary items easily using React-Beautiful-DnD.
+- **User Authentication**: Secure login and user management powered by Firebase Authentication.
+- **File Management**: Upload, download, and delete trip-related files using React-Dropzone.
+- **Dynamic User Interfaces**: Fully responsive design for seamless use across devices.
 
-## Features
+---
 
-- **Interactive Map Integration**: Display and manage location-based data using Mapbox.
-- **Lottie Animations**: Loading states are displayed with animations for a fun user experience.
-- **Dynamic User Interfaces**: Responsive design for a seamless experience across devices.
-- **User Authentication**: Secure login and user management with Firebase Authentication.
-- **Drag-and-Drop Itinerary Management**: Easily add, remove, and rearrange locations in your itinerary using React-Beautiful-DnD.
-- **File Management**: Upload, download, and delete files such as flight tickets and accommodation bookings using React-Dropzone.
+## **Technologies Used**
 
-## Technologies Used
+- **React**: Modular and component-based front-end framework.
+- **React Router**: Declarative routing for navigation between pages.
+- **Mapbox**: Visualisation of location-based data on interactive maps.
+- **Axios**: HTTP client for API integration.
+- **CSS Modules**: Scoping styles to individual components.
 
-- **React**: A JavaScript library for building user interfaces.
-- **React Router**: Declarative routing for React applications.
-- **Mapbox**: A mapping platform for location-based data visualization.
-- **Axios**: Promise-based HTTP client for API integration.
-- **CSS Modules**: CSS for component-specific styling.
+---
 
-## Installation
+## **Installation**
 
-1. **Clone the repository**:
+### **Prerequisites**
+
+- **Node.js** (v14.x or higher)
+- **npm** (v6.x or higher)
+
+### **Steps**
+
+1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/travelsync-frontend.git
-    cd travelsync-frontend
+    git clone https://github.com/dudleyspence/TravelSync-FE-Extended.git
+    cd TravelSync-FE-Extended
     ```
 
-2. **Install the dependencies**:
+2. Install the dependencies:
 
     ```bash
     npm install
     ```
 
-3. **Set up environment variables**:
+3. Set up environment variables:
 
-    Create a `.env` file in the root directory and add the following variables:
+    Create a `.env` file in the root directory and add the following:
 
     ```plaintext
     REACT_APP_MAPBOX_ACCESS_TOKEN=your_mapbox_access_token
-    REACT_APP_API_BASE_URL= https://travelsync-api-production.up.railway.app
+    REACT_APP_API_BASE_URL=https://travelsync-api-production.up.railway.app
     ```
 
-4. **Start the development server**:
+4. Start the development server:
 
     ```bash
     npm start
     ```
 
-5. **Build for production**:
+5. Build for production:
 
     ```bash
     npm run build
     ```
 
-## Usage
+---
 
-After starting the development server, open your web browser and navigate to `http://localhost:3000` to access the application. The app will automatically reload if you make edits to the source files.
+## **Usage**
 
-## Key Components
+1. Start the development server using the installation steps above.
+2. Open your browser and visit `http://localhost:3000` to access the application.
+3. Manage your itineraries, upload files, and visualise trip plans using the intuitive UI.
 
-## Key Components
+---
 
-- **`App.jsx`**: The main application component that sets up routes and global state management, coordinating the overall functionality of the app.
-- **`ItineraryPage.jsx`**: Manages the itinerary view, allowing users to add, remove, and reorder locations within their travel plans.
-- **`MapPage.jsx`**: Integrates Mapbox to display location data on an interactive map, enhancing the user experience with visual, location-based features.
-- **`Auth`**: Handles user authentication, providing functionality for login, logout, and registration to ensure secure access and user management.
-- **`FilesPage.jsx`**: Allows users to upload, download, and delete files such as flight tickets and accommodation bookings, supporting file management for collaborative trip planning.
-- **`Homepage.jsx`**: The landing page of the application, providing an overview and navigation to different parts of the app, such as itineraries, and join and create itineraries.
+## **Key Components**
 
+- **`App.jsx`**: The core of the application, coordinating routes and global state.
+- **`ItineraryPage.jsx`**: Handles itinerary management, allowing users to add, delete, and reorder destinations.
+- **`MapPage.jsx`**: Integrates Mapbox for displaying visual, interactive maps of trip locations.
+- **`Auth`**: Ensures secure login, logout, and registration with Firebase Authentication.
+- **`FilesPage.jsx`**: Manages file uploads, downloads, and deletions for trip-related documents.
+- **`Homepage.jsx`**: Provides a welcoming overview and navigation hub for the application.
 
-## API Integration
+---
 
-The front end communicates with the TravelSync API to perform CRUD operations on itineraries, authenticate users, and fetch location data from Google Places.
-Axios is used to make HTTP requests to the backend.
+## **API Integration**
+
+TravelSync Front-End communicates with the TravelSync API to handle:
+
+- **CRUD Operations**: Manage itineraries, destinations, and other resources.
+- **User Authentication**: Ensure secure access and user actions.
+- **Location Data Retrieval**: Leverage Google Places for fetching location-based information.
+
+Axios is utilised for all HTTP requests to streamline interactions with the API.
+
+---
+
+## **Future Enhancements**
+
+- **Enhanced Itinerary Sharing**: Add the ability to share itineraries directly via links or email.
+- **Offline Mode**: Introduce caching to allow users to access trip details without internet connectivity.
+- **Dark Mode**: Provide an optional dark theme for better accessibility and usability.
+
+---
+
+## **Contributing**
+
+Contributions are welcome! Feel free to fork the repository, make changes, and submit a pull request for review.
+
+---
+
+## **Related Repositories**
+
+<div align="center">
+    <table>
+        <tr>
+            <td align="center" width="50%">
+                <a href="https://github.com/dudleyspence/TravelSync-API-Extended">
+                    <img src="https://github-readme-stats.vercel.app/api/pin/?username=dudleyspence&repo=TravelSync-API-Extended&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=0f172a&hide_border=true&locale=en" />
+                </a>
+            </td>
+            <td align="center" width="50%">
+                <a href="https://github.com/dudleyspence/TravelSync-FE-Extended">
+                    <img src="https://github-readme-stats.vercel.app/api/pin/?username=dudleyspence&repo=TravelSync-FE-Extended&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=0f172a&hide_border=true&locale=en" />
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" width="50%">
+                <a href="https://github.com/dudleyspence/TravelSync-FE-Group">
+                    <img src="https://github-readme-stats.vercel.app/api/pin/?username=dudleyspence&repo=TravelSync-FE-Group&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=0f172a&hide_border=true&locale=en" />
+                </a>
+            </td>
+            <td align="center" width="50%">
+                <a href="https://github.com/dudleyspence/TravelSync-API-Group">
+                    <img src="https://github-readme-stats.vercel.app/api/pin/?username=dudleyspence&repo=TravelSync-API-Group&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=0f172a&hide_border=true&locale=en" />
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
 

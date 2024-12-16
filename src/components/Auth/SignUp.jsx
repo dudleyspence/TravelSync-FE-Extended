@@ -3,7 +3,7 @@ import { Navigate, Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../Context/AuthContext";
 import { doCreateUserWithEmailAndPassword } from "../../firebase/auth";
 import logo from "../../assets/TravelSync.png";
-import { addNewUser } from "../../axios/index";
+import { saveNewUser } from "../../axios/index";
 export default function SignUp() {
   const navigate = useNavigate();
   const { userLoggedIn } = useAuth();
@@ -29,7 +29,7 @@ export default function SignUp() {
         .then((userCredential) => {
           const user = userCredential.user;
 
-          return addNewUser(user.uid, name, email);
+          return saveNewUser(user.uid, name, email);
         })
         .then(() => {
           navigate("/");
